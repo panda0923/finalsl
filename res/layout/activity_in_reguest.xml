@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/pattern_bg"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="org.androidtown.book.mission03.LoginActivity" >
+
+    <ImageView
+        android:id="@+id/ImageView02"
+        android:layout_width="800dp"
+        android:layout_height="5dp"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/ImageView01"
+        android:background="@drawable/bg_bar" />
+
+   
+    
+    <RadioButton
+        android:id="@+id/radioButton1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/button1"
+        android:layout_alignLeft="@+id/checkBox2"
+        android:text="@string/str_map"
+        android:textColor="#ffFFFF" />
+
+    <CheckBox
+        android:id="@+id/checkBox2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/checkBox1"
+        android:layout_alignBottom="@+id/checkBox1"
+        android:layout_alignLeft="@+id/ImageView01"
+        android:background="#55F8F8FF"
+        android:text="퇴근"
+        android:textColor="#ffFFFF" />
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="300dp"
+        android:layout_height="250dp"
+        android:layout_alignLeft="@+id/ImageView02"
+        android:layout_below="@+id/checkBox1"
+        android:orientation="vertical" >
+
+   
+    </LinearLayout>
+
+    <fragment
+        android:id="@+id/map"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:layout_above="@+id/radioButton1"
+        android:layout_alignParentRight="true"
+        class="com.google.android.gms.maps.MapFragment" />
+    <TextView
+        android:id="@+id/textResult"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/textView2"
+        android:layout_alignParentLeft="true"
+        android:text="Press Button" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="150dp"
+        android:layout_height="40dp"
+        android:layout_alignLeft="@+id/textResult"
+        android:layout_alignTop="@+id/radioButton1"
+        android:layout_margin="10dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/round_box"
+        android:padding="10dp"
+        android:text="선택:"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="#ffFFFF" />
+
+    <ImageView
+        android:id="@+id/ImageView01"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignRight="@+id/ImageView02"
+        android:background="@drawable/logo" />
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/ImageView01"
+        android:layout_alignRight="@+id/ImageView01"
+        android:layout_marginBottom="14dp"
+        android:text="이송이 사원"
+        android:textColor="#00FFFF"
+        android:textSize="18dp"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="50dp"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignRight="@+id/radioButton1"
+        android:layout_marginRight="16dp"
+        android:background="#6600FFFF"
+        android:text="@string/str_request" />
+
+    <CheckBox
+        android:id="@+id/checkBox1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/map"
+        android:layout_alignLeft="@+id/textView2"
+        android:layout_marginLeft="35dp"
+        android:background="#55F8F8FF"
+        android:text="출근"
+        android:textColor="#ffFFFF" />
+
+    <ImageButton
+        android:id="@+id/button2"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_alignBottom="@+id/button1"
+        android:layout_alignLeft="@+id/textView2"
+        android:background="@drawable/back"
+        android:contentDescription="ok button" />
+
+</RelativeLayout>
